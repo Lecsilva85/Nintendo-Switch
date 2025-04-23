@@ -1,0 +1,239 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #00bbde;
+    color: #FFFFFF;
+    padding: 20px 70px;
+    height: 100vh;
+    overflow: hidden;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    flex-direction: column;
+    transition: background-color .9s ease-in-out;
+}
+
+body::before {
+    content: '';
+    background-color: #FE0F22;
+    width: 100%;
+    height: 120%;
+    position: absolute;
+    top: 0;
+    left: -505px;
+    transform: rotate(-68deg);
+}
+
+body::after {
+    content: '';
+    content: 'Oled';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #FFFFFF;
+    font-size: 250px;
+    font-weight: bold;
+    opacity: .5;
+}
+
+.logo {
+    width: 80px;
+    position: relative;
+    z-index: 3;
+}
+
+.container-h1 {
+    width: 380px;
+}
+
+h4 {
+    font-size: 30px;
+}
+
+h1 {
+    font-size: 50px;
+    font-weight: 500;
+}
+
+p {
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.botao-carrinho {
+    background-color: #d60011;
+    color: white;
+    padding: 8px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.botao-carrinho:hover {
+    box-shadow: 0 0 5px white, 0 0 10px white, 0 0 20px white, 0 0 30px white;
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+.botao-carrinho:active {
+    opacity: .6;
+    transition: 0.3s;
+}
+
+.console-neon {
+    width: 600px;
+    transform: rotate(-15deg);
+    filter: drop-shadow(30px 45px 40px #161616);
+    transition: 1s;
+}
+
+.console-neon:hover {
+    transform: rotate(0deg);
+    filter: drop-shadow(0px 0px 0px #161616);
+    transition: 1s;
+}
+
+.troca-efeito {
+    opacity: 0;
+    rotate: (-15deg) translatex(30px);
+}
+
+.rotacionando {
+    transform: rotate(0deg)
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 75%;
+    margin-top: 40px;
+    position: relative;
+    z-index: 1;
+}
+
+.container-text {
+    width: 380px;
+}
+
+.container-botoes {
+    position: relative;
+    z-index: 2;
+    gap: 10px;
+    display: flex;
+    top: -50px;
+}
+
+.botoes {
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.botoes:active {
+    opacity: .8;
+}
+
+.neon {
+    background-color: #00bbde;
+    border: 3px solid #fe6053;
+}
+
+.neon:hover {
+    transform: scale(1.1);
+    transition: 0.2s;
+}
+
+.branco {
+    background-color: #dbd4d4;
+    border: 3px solid #3a3e40;
+}
+
+.branco:hover {
+    transform: scale(1.1);
+    transition: 0.2s;
+}
+
+.vermelho {
+    background-color: #fe6053;
+    border: 3px solid #d60011;
+}
+
+.vermelho:hover {
+    transform: scale(1.1);
+    transition: 0.2s;
+}
+
+.verde {
+    background-color: #19725a;
+    border: 2.5px solid #e9ce97;
+}
+
+.verde:hover {
+    transform: scale(1.1);
+    transition: 0.2s;
+}
+
+.botoes.active {
+    display: block;
+}
+
+@media (max-width: 1300px) {
+    body {
+        padding: 20px 20px;
+        transition: background-color .5s ease-in-out;
+        overflow: hidden;
+        position: fixed;
+        max-width: 90%;
+    }
+
+body::before {
+    content: '';
+    background-color: #FE0F22;
+    width: 170%;
+    height: 110%;
+    position: absolute;
+    top: -400px;
+    left: 0;
+    transform: rotate(-95deg);
+}
+
+body::after{
+    font-size: 180px;
+}
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: -65px;
+    }
+
+    .container-text {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .container-botoes {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        top: 5px;
+    }
+
+    .console-neon {
+        width: 100%;
+        transform: rotate(0deg);
+    }
+
+    h1 {
+        margin-top: -25px;
+        margin-bottom: 5px;
+    }
+
+    .botao-carrinho {
+       border: white solid 2px;
+       margin: 10px 0;
+    }
+}
